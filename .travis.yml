@@ -1,0 +1,29 @@
+#指定语言为cpp
+language: cpp
+#需要sudu权限
+sudo: required
+#编译器为gcc
+compiler: gcc
+#环境变量
+env: QT_BASE="59"
+#缓存
+cache: bundler
+#组
+group: deprecated-2017Q4
+
+# travis默认系统为ubuntu，并提供一些基础的命令。但是没有安装Qt，需要通过ubuntu源进行安装。
+# 关于ubuntu源 在这个网站上查看细节 https://launchpad.net/~beineri/+archive/ubuntu/
+# 当然也可以通过qt安装包 +一些命令的方式来安装，这里以源的方式为主。
+#安装前的设置
+#添加qt5.9.6的源
+before_install:
+    - sudo add-apt-repository ppa:beineri/opt-qt596-trusty -y;
+    - sudo apt-get update -qq;
+install:
+    - sudo apt-get install -qq qt59-meta-minimal; source /opt/qt59/bin/qt59-env.sh;
+
+script:
+    - qmake
+    - make
+notifications:
+    email: false
