@@ -13,7 +13,7 @@
 
 [lin-badge]: https://travis-ci.org/wentaojia2014/HelloCI.svg?branch=master "Travis build status"
 [lin-link]: https://travis-ci.org/wentaojia2014/HelloCI "Travis build status"
-[win-badge]: https://ci.appveyor.com/api/projects/status/o56f7y1tdctr9t08?svg=true "AppVeyor build status"
+[win-badge]: https://ci.appveyor.com/api/projects/status/yykx4xufxtrax1hi?svg=true "AppVeyor build status"
 [win-link]: https://ci.appveyor.com/project/jiawentao/helloci "AppVeyor build status"
 
 ## License
