@@ -3,28 +3,37 @@ version: '{build}'
 branches:
   except:
     - project/travis
-image:
-- Visual Studio 2013
-- Visual Studio 2015
-- Visual Studio 2017
 environment:
   matrix:
-  - platform: x86
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    platform: x86
     qt: 5.9
-  - platform: x86
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    platform: x86
     qt: 5.10
-  - platform: x86
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    platform: x86
     qt: 5.11
-  - platform: x64
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    platform: x64
     qt: 5.9
-  - platform: x64
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    platform: x64
     qt: 5.10
-  - platform: x64
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    platform: x64
+    qt: 5.11
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    platform: x64
+    qt: 5.9
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    platform: x64
+    qt: 5.10
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    platform: x64
     qt: 5.11
 
 build_script:
-  - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2013" set msvc=msvc2013
-  - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2013" set vs=12.0
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2015" set msvc=msvc2015
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2015" set vs=14.0
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2017" set msvc=msvc2017
@@ -32,11 +41,10 @@ build_script:
   - if "%platform%"=="x86" set QTDIR=C:\Qt\%qt%\%msvc%
   - if "%platform%"=="x64" set QTDIR=C:\Qt\%qt%\%msvc%_64
   - set PATH=%PATH%;%QTDIR%\bin;
-  - echo "%QTDIR%"
-  - if "%platform%"=="x86" set vcvarsall=C:\Program Files (x86)\Microsoft Visual Studio %vs%\VC\vcvars32.bat
-  - if "%platform%"=="x64" set vcvarsall=C:\Program Files (x86)\Microsoft Visual Studio %vs%\VC\vcvars64.bat
-  - echo "%vcvarsall%"
-  - call "%vcvarsall%"
+  # - if "%platform%"=="x86" set vcvarsall=C:\Program Files (x86)\Microsoft Visual Studio %vs%\VC\vcvars32.bat
+  # - if "%platform%"=="x64" set vcvarsall=C:\Program Files (x86)\Microsoft Visual Studio %vs%\VC\vcvars64.bat
+  # - echo "%vcvarsall%"
+  # - call "%vcvarsall%"
   - echo "%PATH%"
   - qmake
   - nmake
