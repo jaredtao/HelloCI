@@ -10,13 +10,17 @@ image:
 environment:
   matrix:
   - platform: x86
-    - qt: 5.9
-    - qt: 5.10
-    - qt: 5.11
+    qt: 5.9
+  - platform: x86
+    qt: 5.10
+  - platform: x86
+    qt: 5.11
   - platform: x64
-    - qt: 5.9
-    - qt: 5.10
-    - qt: 5.11
+    qt: 5.9
+  - platform: x64
+    qt: 5.10
+  - platform: x64
+    qt: 5.11
 
 before_build :
   - if %APPVEYOR_BUILD_WORKER_IMAGE% == "Visual Studio 2013" set msvc="msvc2013" && set vs=12.0
