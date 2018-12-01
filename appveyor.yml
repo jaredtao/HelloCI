@@ -41,9 +41,10 @@ build_script:
   - if "%platform%"=="x86" set QTDIR=C:\Qt\%qt%\%msvc%
   - if "%platform%"=="x64" set QTDIR=C:\Qt\%qt%\%msvc%_64
   - set PATH=%PATH%;%QTDIR%\bin;
-  - if "%platform%"=="x86" set vcvarsall=%vs%\vcvars32.bat
-  - if "%platform%"=="x64" set vcvarsall=%vs%\vcvars64.bat
-  - call "%vcvarsall%"
+  - if "%platform%"=="x86" set vcvarsall=%vs%\vcvarsall.bat
+  - if "%platform%"=="x64" set vcvarsall=%vs%\vcvarsall.bat
+  - if "%platform%"=="x86" call "%vcvarsall%" x86
+  - if "%platform%"=="x64" call "%vcvarsall%" x64
   - qmake
   - nmake
 
