@@ -33,7 +33,8 @@ build_script:
   - set vcvarsall=C:\Program Files (x86)\Microsoft Visual Studio %vs%\VC\vcvarsall.bat
   - echo "%vcvarsall%"
   - call "%vcvarsall%" %platform%
-  - %QTDIR%\bin\qmake
+  - echo "%PATH%"
+  - qmake
   - nmake
  # - set vcvarsall=C:\Program Files (x86)\Microsoft Visual Studio %vs%\VC\vcvarsall.bat
  # - call "%vcvarsall%" %platform%
