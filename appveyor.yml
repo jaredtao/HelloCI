@@ -35,7 +35,7 @@ environment:
 
 build_script:
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2015" set msvc=msvc2015
-  - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2015" set vs=C:\Program Files (x86)\Microsoft Visual Studio 14.0\Community\VC\Auxiliary\Build
+  - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2015" set vs=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2017" set msvc=msvc2017
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2017" set vs=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build
   - if "%platform%"=="x86" set QTDIR=C:\Qt\%qt%\%msvc%
@@ -43,17 +43,7 @@ build_script:
   - set PATH=%PATH%;%QTDIR%\bin;
   - if "%platform%"=="x86" set vcvarsall=%vs%\vcvars32.bat
   - if "%platform%"=="x64" set vcvarsall=%vs%\vcvars64.bat
-  - echo "%vcvarsall%"
   - call "%vcvarsall%"
-  - echo "%PATH%"
   - qmake
   - nmake
- # - set vcvarsall=C:\Program Files (x86)\Microsoft Visual Studio %vs%\VC\vcvarsall.bat
- # - call "%vcvarsall%" %platform%
 
-# build_script:
-#   - call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" x86_amd64
-#   - set QTDIR=C:\Qt\5.9\msvc2015_64
-#   - set PATH=%PATH%;%QTDIR%\bin;
-#   - qmake
-#   - nmake 
