@@ -23,13 +23,14 @@ environment:
     qt: 5.11
 
 before_build :
-  - if %APPVEYOR_BUILD_WORKER_IMAGE% == "Visual Studio 2013" set msvc="msvc2013" && set vs=12.0
-  - if %APPVEYOR_BUILD_WORKER_IMAGE% == "Visual Studio 2015" set msvc="msvc2015" && set vs=14.0
-  - if %APPVEYOR_BUILD_WORKER_IMAGE% == "Visual Studio 2017" set msvc="msvc2017" && set vs=14.1
-  - if %platform% == "x86" set QTDIR="C:\Qt\" + %qt% + "\" + %msvc%
-  - if %platform% == "x64" set QTDIR="C:\Qt\" + %qt% + "\" + %msvc% + "_64"  
+  - if %APPVEYOR_BUILD_WORKER_IMAGE%=="Visual Studio 2013" set msvc="msvc2013" && set vs="12.0"
+  - if %APPVEYOR_BUILD_WORKER_IMAGE%=="Visual Studio 2015" set msvc="msvc2015" && set vs="14.0"
+  - if %APPVEYOR_BUILD_WORKER_IMAGE%=="Visual Studio 2017" set msvc="msvc2017" && set vs="14.1"
+  - if %platform%=="x86" set QTDIR="C:\Qt\" + %qt% + "\" + %msvc%
+  - if %platform%=="x64" set QTDIR="C:\Qt\" + %qt% + "\" + %msvc% + "_64"  
   - set PATH=%PATH%;%QTDIR%\bin;
   - set vcvarsall = "C:\Program Files (x86)\Microsoft Visual Studio " + %vs% + "\VC\vcvarsall.bat"
+  - echo %vavarsall%
   - call %vcvarsall% %platform%
 
 build_script:
