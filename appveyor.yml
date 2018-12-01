@@ -27,13 +27,13 @@ build_script:
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2015" set msvc=msvc2015 && set vs=14.0
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2017" set msvc=msvc2017 && set vs=14.1
   - if "%platform%"=="x86" set QTDIR=C:\Qt\%qt%\%msvc%
-  - if "%platform%"=="x64" set QTDIR=C:\Qt\%qt%\%msvc%_64  
+  - if "%platform%"=="x64" set QTDIR=C:\Qt\%qt%\%msvc%_64
   - set PATH=%PATH%;%QTDIR%\bin;
   - echo "%QTDIR%"
   - set vcvarsall=C:\Program Files (x86)\Microsoft Visual Studio %vs%\VC\vcvarsall.bat
   - echo "%vcvarsall%"
   - call "%vcvarsall%" %platform%
-  - qmake
+  - %QTDIR%\bin\qmake
   - nmake
  # - set vcvarsall=C:\Program Files (x86)\Microsoft Visual Studio %vs%\VC\vcvarsall.bat
  # - call "%vcvarsall%" %platform%
