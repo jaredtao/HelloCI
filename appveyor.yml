@@ -30,7 +30,7 @@ before_build :
   - if "%platform%"=="x64" set QTDIR=C:\Qt\%qt%\%msvc%_64  
   - set PATH=%PATH%;%QTDIR%\bin;
   - set vcvarsall=C:\Program Files (x86)\Microsoft Visual Studio %vs%\VC\vcvarsall.bat
-  - call %vcvarsall% %platform%
+  - call "%vcvarsall%" %platform%
 
 build_script:
   - qmake
