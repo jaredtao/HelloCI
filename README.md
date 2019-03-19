@@ -4,9 +4,17 @@
 
 ## 简介：
 
-演示github中Qt项目使用CI
+演示github中的Qt项目，使用CI持续集成(主要是Travis和Appveyor)
 
 可以参考这个博客:https://blog.csdn.net/D759378563/article/details/84643034
+
+Appveyor 支持 Qt5.9 至 5.11 包含vs2015/vs2017 x86或x64
+
+（2019/3/20 更新）
+Travis更新到Ubuntu16.04(xenial) + Qt5.12.1
+
+Appveyor增加Qt5.12 vs2017 x64支持
+
 
 ## Build status
 | [Linux][lin-link] | [Windows][win-link] |
@@ -23,7 +31,7 @@
 
 ## 开发环境
 
-* Qt 5.9.x Windows/Ubuntu
+* Qt 5.12.x Windows/Ubuntu
 
 ## 联系方式:
 ***
