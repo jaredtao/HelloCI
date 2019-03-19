@@ -8,12 +8,13 @@
 
 可以参考这个博客:https://blog.csdn.net/D759378563/article/details/84643034
 
-Appveyor 支持 Qt5.9 至 5.11 包含vs2015/vs2017 x86或x64
+Appveyor 支持 Qt5.9 至 5.12 包含vs2015/vs2017 x86/x64
 
-（2019/3/20 更新）
+可参考下图:
+
+![](Appveyor.png)
+
 Travis更新到Ubuntu16.04(xenial) + Qt5.12.1
-
-Appveyor增加Qt5.12 vs2017 x64支持
 
 
 ## Build status
