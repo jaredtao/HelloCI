@@ -1,20 +1,30 @@
 # HelloCI
 
-你好CI
-
-## 简介：
+## 简介
 
 演示github中的Qt项目，使用CI持续集成(主要是Travis和Appveyor)
 
 可以参考这个博客:https://blog.csdn.net/D759378563/article/details/84643034
 
+## Appveyor
 Appveyor 支持 Qt5.9 至 5.12 包含vs2015/vs2017 x86/x64
 
-可参考下图:
+可以参考官方链接https://www.appveyor.com/docs/windows-images-software/#qt
+
+当前项目配置可参考下图:
 
 ![](Appveyor.png)
 
-Travis更新到Ubuntu16.04(xenial) + Qt5.12.1
+## Travis
+Travis 使用 https://launchpad.net/~beineri 提供的源来安装Qt
+
+支持版本可参考下图:
+
+![](ppa-binner.png)
+
+当前项目配置为最新的Ubuntu16.04(xenial) + Qt5.12.1
+
+18.04(bionic)暂时没有找到可用的方法
 
 
 ## Build status
