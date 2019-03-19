@@ -6,6 +6,8 @@
 
 演示github中Qt项目使用CI
 
+可以参考这个博客:https://blog.csdn.net/D759378563/article/details/84643034
+
 ## Build status
 | [Linux][lin-link] | [Windows][win-link] |
 | :---------------: | :-----------------: |
