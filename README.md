@@ -45,7 +45,7 @@ Travis 使用 https://launchpad.net/~beineri 提供的源来安装Qt
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/wentaojia2014/TableEdit/blob/master/LICENSE)
 ## Release
 
-![](https://github.com/wentaojia2014/HelloCI/releases)
+[Release](https://github.com/wentaojia2014/HelloCI/releases Release)
 
 ## 开发环境
 
