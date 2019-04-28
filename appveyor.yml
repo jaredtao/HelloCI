@@ -44,7 +44,7 @@ build_script:
 
 artifacts:
   - path: bin
-    name: $(releaseName)
+    name: Releases
 deploy:
   provider: GitHub
   auth_token: $(GITHUB_OAUTH_TOKEN)
