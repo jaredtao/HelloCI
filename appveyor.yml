@@ -18,13 +18,7 @@ environment:
     platform: x64
     qt: 5.9
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-    platform: x86
-    qt: 5.12
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
     platform: x64
-    qt: 5.12
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-    platform: x86
     qt: 5.12
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
     platform: x64
