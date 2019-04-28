@@ -13,17 +13,21 @@ matrix:
     - os: linux
       dist: xenial
       env: targetFile=HelloCI
+      cache:
+        bundler: true
+        apt: true
+        directories:
+            - /opt/qt512/
     - os: osx
       osx_image: xcode10.2
       env: targetFile=HelloCI.app
+      cache:
+        bundler: true
+        directories:
+            - /usr/local/Cellar/qt/5.12.2/
   
 #缓存
-cache:
-    bundler: true
-    apt: true
-    directories:
-        - /opt/qt512/
-        - /usr/local/Cellar/qt/5.12.2/
+
 # 注意上面的缓存,指定qt安装路径，可以避免重复安装
 
 #组
