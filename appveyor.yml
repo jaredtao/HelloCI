@@ -8,23 +8,23 @@ environment:
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
     platform: x86
     qt: 5.9
-    releaseName: HelloCI_qt59_vs2015_x86.exe
+    releaseName: HelloCI_qt59_vs2015_x86
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
     platform: x64
     qt: 5.9
-    releaseName: HelloCI_qt59_vs2015_x64.exe
+    releaseName: HelloCI_qt59_vs2015_x64
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
     platform: x64
     qt: 5.9
-    releaseName: HelloCI_qt519_vs2017_x64.exe
+    releaseName: HelloCI_qt519_vs2017_x64
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
     platform: x64
     qt: 5.12
-    releaseName: HelloCI_qt512_vs2015_x64.exe
+    releaseName: HelloCI_qt512_vs2015_x64
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
     platform: x64
     qt: 5.12
-    releaseName: HelloCI_qt512_vs2017_x64.exe
+    releaseName: HelloCI_qt512_vs2017_x64
 
 build_script:
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2015" set msvc=msvc2015
@@ -40,12 +40,17 @@ build_script:
   - if "%platform%"=="x64" call "%vcvarsall%" x64
   - qmake
   - nmake
+  - windeployqt bin\HelloCI.exe --qmldir %QTDIR%\qml
+  # - 7z a $(releaseName).zip bin
+artifacts:
+  - path: bin
+    name: $(releaseName)
 deploy:
   release: $(releaseName)
   description: 'HelloCI Release'
   provider: GitHub
   auth_token: $(GITHUB_OAUTH_TOKEN)
-  artifact: bin\HelloCI.exe
+  artifact: $(releaseName)
   prerelease: false
   on:
       APPVEYOR_REPO_TAG: true
