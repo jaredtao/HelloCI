@@ -1,4 +1,4 @@
-dist: xenial
+#dist: xenial
 #指定语言为cpp
 language: cpp
 #需要sudu权限
@@ -6,13 +6,24 @@ sudo: required
 #编译器为gcc
 compiler: gcc
 #环境变量
-env: QT_BASE="512"
+#env: QT_BASE="512"
+
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+      env: targetFile=HelloCI
+    - os: osx
+      osx_image: xcode10.2
+      env: targetFile=HelloCI.app
+  
 #缓存
 cache:
     bundler: true
     apt: true
     directories:
         - /opt/qt512/
+        - /usr/local/Cellar/qt/5.12.2/
 # 注意上面的缓存,指定qt安装路径，可以避免重复安装
 
 #组
@@ -24,18 +35,33 @@ group: deprecated-2019Q1
 #安装前的设置
 #添加qt5.12.1的源
 before_install:
-    - sudo add-apt-repository ppa:beineri/opt-qt-5.12.1-xenial -y
-    - sudo apt-get update -qq
-    - sudo apt-get install -y libglew-dev libglfw3-dev
-    - sudo apt-get install -y qt512-meta-minimal
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update;
+        brew install qt; 
+     fi 
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then 
+        sudo add-apt-repository ppa:beineri/opt-qt-5.12.3-xenial -y;
+        sudo apt-get update -qq;
+        sudo apt-get install -y libglew-dev libglfw3-dev;
+        sudo apt-get install -y qt512-meta-minimal;
+    fi
 # 单独安装qt3d模块的示例
 #    - sudo apt-get install -y qt5123d
 
 before_script:
-    - source /opt/qt512/bin/qt512-env.sh
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then source /opt/qt512/bin/qt512-env.sh; fi
 script:
-    - qmake
-    - make
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then source /opt/qt512/bin/qt512-env.sh; qmake ; make ; fi
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then /usr/local/Cellar/qt/5.12.2/bin/qmake ; make ; fi
 
+# before_deploy:
+#     - echo 123
+deploy:              # 部署
+  provider: releases # 部署到 GitHub Release，除此之外，Travis CI 还支持发布到 fir.im、AWS、Google App Engine 等
+  api_key:           # 填写 GitHub 的 token （Settings -> Personal access tokens -> Generate new token）
+    secure: e6e06f67574eb9abd0d53c6a49beb03f0850bc2b
+  file: bin/${targetFile}   # 部署文件路径
+  skip_cleanup: true     # 设置为 true 以跳过清理,不然 apk 文件就会被清理
+  on:     # 发布时机           
+    tags: true       # tags 设置为 true 表示只有在有 tag 的情况下才部署   
 notifications:
     email: false
