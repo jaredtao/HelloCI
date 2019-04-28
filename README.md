@@ -5,6 +5,7 @@
 演示github中的Qt项目，使用CI持续集成(主要是Travis和Appveyor)
 
 可以参考这个博客:
+
 Qt工程持续集成系列之一 - 自动化编译 https://blog.csdn.net/D759378563/article/details/84643034 （审核中）
 
 Qt工程持续集成系列之二 - 自动化发行https://blog.csdn.net/D759378563/article/details/89648303（审核中）
@@ -42,6 +43,9 @@ Travis 使用 https://launchpad.net/~beineri 提供的源来安装Qt
 
 ## License
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/wentaojia2014/TableEdit/blob/master/LICENSE)
+## Release
+
+[](https://github.com/wentaojia2014/HelloCI/releases)
 
 ## 开发环境
 
