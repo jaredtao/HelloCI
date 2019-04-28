@@ -40,7 +40,7 @@ before_build:
 build_script:
   - qmake
   - nmake
-before_deploy:
+before_package:
   - windeployqt bin\HelloCI.exe --qmldir %QTDIR%\qml
 artifacts:
   - path: bin
