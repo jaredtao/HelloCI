@@ -35,6 +35,7 @@ build_script:
   - if "%platform%"=="x64" call "%vcvarsall%" x64
   - qmake
   - nmake
+  - dir bin
 deploy:
   release: HelloCI 
   description: 'HelloCI Release'
