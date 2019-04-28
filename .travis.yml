@@ -36,5 +36,6 @@ before_script:
 script:
     - qmake
     - make
+
 notifications:
     email: false
