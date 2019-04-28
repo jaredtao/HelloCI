@@ -40,8 +40,8 @@ deploy:
   description: 'HelloCI Release'
   provider: GitHub
   auth_token:
-    secure: e6e06f67574eb9abd0d53c6a49beb03f0850bc2b 
-  artifact: HelloCI.exe
+    secure: 6d08a6197058c659abcc6848d3eba0506e30b576 
+  artifact: bin\HelloCI.exe
   draft: false
   prerelease: false
   on:
