@@ -9,32 +9,27 @@ environment:
     platform: x86
     qt: 5.9
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-    platform: x86
-    qt: 5.10
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-    platform: x86
-    qt: 5.11
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-    platform: x64
-    qt: 5.9
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-    platform: x64
-    qt: 5.10
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-    platform: x64
-    qt: 5.11
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
     platform: x64
     qt: 5.9
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-    platform: x64
-    qt: 5.10
+    platform: x86
+    qt: 5.9
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
     platform: x64
-    qt: 5.11
+    qt: 5.9
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    platform: x86
+    qt: 5.12
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+    platform: x64
+    qt: 5.12
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+    platform: x86
+    qt: 5.12
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
     platform: x64
     qt: 5.12
+
 build_script:
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2015" set msvc=msvc2015
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2015" set vs=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC
@@ -49,4 +44,15 @@ build_script:
   - if "%platform%"=="x64" call "%vcvarsall%" x64
   - qmake
   - nmake
-
+deploy:
+  release: HelloCI 
+  description: 'HelloCI Release'
+  provider: GitHub
+  auth_token:
+    secure: e6e06f67574eb9abd0d53c6a49beb03f0850bc2b 
+  artifact: HelloCI.exe
+  draft: false
+  prerelease: false
+  on:
+      branch: master
+      APPVEYOR_REPO_TAG: true
