@@ -40,8 +40,8 @@ build_script:
   - if "%platform%"=="x64" call "%vcvarsall%" x64
   - qmake
   - nmake
-  - windeployqt bin\HelloCI.exe --qmldir %QTDIR%\qml
-  # - 7z a $(releaseName).zip bin
+  - if %APPVEYOR_REPO_TAG% windeployqt bin\HelloCI.exe --qmldir %QTDIR%\qml
+
 artifacts:
   - path: bin
     name: $(releaseName)
@@ -51,6 +51,8 @@ deploy:
   provider: GitHub
   auth_token: $(GITHUB_OAUTH_TOKEN)
   artifact: $(releaseName)
+  draft: false
   prerelease: false
   on:
+      branch: master
       APPVEYOR_REPO_TAG: true

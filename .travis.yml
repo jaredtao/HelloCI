@@ -68,7 +68,6 @@ deploy:              # 部署
   api_key: $GITHUB_OAUTH_TOKEN # 填写 GitHub 的 token （Settings -> Personal access tokens -> Generate new token）
   file: bin/${releaseName}   # 部署文件路径
   skip_cleanup: true     # 设置为 true 以跳过清理,不然 apk 文件就会被清理
-  draft: true
   on:     # 发布时机           
     tags: true       # tags 设置为 true 表示只有在有 tag 的情况下才部署   
 notifications:
