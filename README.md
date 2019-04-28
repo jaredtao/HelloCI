@@ -4,7 +4,10 @@
 
 演示github中的Qt项目，使用CI持续集成(主要是Travis和Appveyor)
 
-可以参考这个博客:https://blog.csdn.net/D759378563/article/details/84643034
+可以参考这个博客:
+Qt工程持续集成系列之一 - 自动化编译 https://blog.csdn.net/D759378563/article/details/84643034 （审核中）
+
+Qt工程持续集成系列之二 - 自动化发行https://blog.csdn.net/D759378563/article/details/89648303（审核中）
 
 ## Appveyor
 Appveyor 支持 Qt5.9 至 5.12 包含vs2015/vs2017 x86/x64
