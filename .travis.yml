@@ -61,3 +61,4 @@ deploy:              # 部署
     tags: true       # tags 设置为 true 表示只有在有 tag 的情况下才部署   
 notifications:
     email: false
+
