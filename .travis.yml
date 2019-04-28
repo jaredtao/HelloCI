@@ -12,7 +12,9 @@ matrix:
   include:
     - os: linux
       dist: xenial
-      env: targetFile=HelloCI_ubuntu_xenial_x64
+      env: 
+        targetFile=HelloCI
+        releaseName=HelloCI_ubuntu_xenial_x64
       cache:
         bundler: true
         apt: true
