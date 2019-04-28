@@ -39,9 +39,9 @@ deploy:
   release: HelloCI 
   description: 'HelloCI Release'
   provider: GitHub
-  auth_token: $GITHUB_OAUTH_TOKEN
+  auth_token: "PzkXwwU9M5SZv0kpKF1dEA"
   artifact: bin\HelloCI.exe
-  draft: false
+  draft: true
   prerelease: false
   on:
       APPVEYOR_REPO_TAG: true
