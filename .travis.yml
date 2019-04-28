@@ -35,15 +35,8 @@ group: deprecated-2019Q1
 #安装前的设置
 #添加qt5.12.1的源
 before_install:
-    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update;
-        brew install qt; 
-     fi 
-    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then 
-        sudo add-apt-repository ppa:beineri/opt-qt-5.12.3-xenial -y;
-        sudo apt-get update -qq;
-        sudo apt-get install -y libglew-dev libglfw3-dev;
-        sudo apt-get install -y qt512-meta-minimal;
-    fi
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; brew install qt; fi 
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo add-apt-repository ppa:beineri/opt-qt-5.12.3-xenial -y; sudo apt-get update -qq; sudo apt-get install -y libglew-dev libglfw3-dev; sudo apt-get install -y qt512-meta-minimal; fi
 # 单独安装qt3d模块的示例
 #    - sudo apt-get install -y qt5123d
 
