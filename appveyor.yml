@@ -25,8 +25,7 @@ environment:
     platform: x64
     qt: 5.12
     releaseName: HelloCI_qt512_vs2017_x64
-
-build_script:
+before_build:
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2015" set msvc=msvc2015
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2015" set vs=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC
   - if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2017" set msvc=msvc2017
@@ -38,13 +37,14 @@ build_script:
   - if "%platform%"=="x64" set vcvarsall=%vs%\vcvarsall.bat
   - if "%platform%"=="x86" call "%vcvarsall%" x86
   - if "%platform%"=="x64" call "%vcvarsall%" x64
+build_script:
   - qmake
   - nmake
-  - if %APPVEYOR_REPO_TAG%=="true" windeployqt bin\HelloCI.exe --qmldir %QTDIR%\qml
-
+before_deploy:
+  - windeployqt bin\HelloCI.exe --qmldir %QTDIR%\qml
 artifacts:
   - path: bin
-    name: Releases
+    name: $(releaseName)
 deploy:
   provider: GitHub
   auth_token: $(GITHUB_OAUTH_TOKEN)
