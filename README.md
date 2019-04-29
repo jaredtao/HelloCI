@@ -6,9 +6,25 @@
 
 可以参考这个博客:
 
-Qt工程持续集成系列之一 - 自动化编译 https://blog.csdn.net/D759378563/article/details/84643034 （审核中）
+Qt工程持续集成系列之一 - 自动化编译 https://zhuanlan.zhihu.com/p/64154823
 
-Qt工程持续集成系列之二 - 自动化发行https://blog.csdn.net/D759378563/article/details/89648303（审核中）
+Qt工程持续集成系列之二 - 自动化发行 https://zhuanlan.zhihu.com/p/64154979
+
+## status
+| [Linux][lin-link] | [Windows][win-link] |[License][license-link] | [Release][release-link]|[Download][download-link]|
+| :---------------: | :-----------------: | :-----------------:|:-----------------: |:-----------------: |
+| ![lin-badge]      | ![win-badge]        | ![license-badge] |![release-badge] | ![download-badge]|
+
+[lin-badge]: https://travis-ci.org/wentaojia2014/HelloCI.svg?branch=master "Travis build status"
+[lin-link]: https://travis-ci.org/wentaojia2014/HelloCI "Travis build status"
+[win-badge]: https://ci.appveyor.com/api/projects/status/yykx4xufxtrax1hi?svg=true "AppVeyor build status"
+[win-link]: https://ci.appveyor.com/project/jiawentao/helloci "AppVeyor build status"
+[release-link]: https://github.com/wentaojia2014/HelloCI/releases "Release status"
+[release-badge]: https://img.shields.io/github/release/wentaojia2014/HelloCI.svg?style=flat-square" "Release status"
+[download-link]: https://github.com/wentaojia2014/HelloCI/releases/latest "Download status"
+[download-badge]: https://img.shields.io/github/downloads/wentaojia2014/HelloCI/total.svg?style=flat-square "Download status"
+[license-link]: https://github.com/wentaojia2014/HelloCI/blob/master/LICENSE "LICENSE"
+[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg "MIT"
 
 ## Appveyor
 Appveyor 支持 Qt5.9 至 5.12 包含vs2015/vs2017 x86/x64
@@ -31,21 +47,6 @@ Travis 使用 https://launchpad.net/~beineri 提供的源来安装Qt
 18.04(bionic)暂时没有找到可用的方法
 
 
-## Build status
-| [Linux][lin-link] | [Windows][win-link] |
-| :---------------: | :-----------------: |
-| ![lin-badge]      | ![win-badge]        |
-
-[lin-badge]: https://travis-ci.org/wentaojia2014/HelloCI.svg?branch=master "Travis build status"
-[lin-link]: https://travis-ci.org/wentaojia2014/HelloCI "Travis build status"
-[win-badge]: https://ci.appveyor.com/api/projects/status/yykx4xufxtrax1hi?svg=true "AppVeyor build status"
-[win-link]: https://ci.appveyor.com/project/jiawentao/helloci "AppVeyor build status"
-
-## License
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/wentaojia2014/TableEdit/blob/master/LICENSE)
-## Release
-
-[Release](https://github.com/wentaojia2014/HelloCI/releases "Release")
 
 ## 开发环境
 
@@ -58,7 +59,7 @@ Travis 使用 https://launchpad.net/~beineri 提供的源来安装Qt
 | 作者 | 涛哥                           |
 | ---- | -------------------------------- |
 |开发理念 | 弘扬鲁班文化，传承工匠精神 |
-| QQ、TIM   | 759378563                      |
+| QQ、TIM   | 759378563                  |
 | 微信 | xsd2410421                       |
 | 邮箱 | jared2020@163.com                |
 | blog | https://wentaojia2014.github.io/ |
