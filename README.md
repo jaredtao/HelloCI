@@ -6,12 +6,12 @@
 
 可以参考这个博客:
 
-Qt工程持续集成系列之一 - 自动化编译 https://zhuanlan.zhihu.com/p/64154823
+[Qt工程持续集成系列之一 - 自动化编译](https://wentaojia2014.github.io/2019/04/30/Qt%E8%87%AA%E5%8A%A8%E5%8C%96%E7%BC%96%E8%AF%91/)
 
-Qt工程持续集成系列之二 - 自动化发行 https://zhuanlan.zhihu.com/p/64154979
+[Qt工程持续集成系列之二 - 自动化发行](https://wentaojia2014.github.io/2019/04/30/Qt%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8F%91%E8%A1%8C/)
 
 ## status
-| [Linux/macos][lin-link] | [Windows][win-link] |[License][license-link] | [Release][release-link]|[Download][download-link]|
+| [Ubuntu/MacOS][lin-link] | [Windows][win-link] |[License][license-link] | [Release][release-link]|[Download][download-link]|
 | :---------------: | :-----------------: | :-----------------:|:-----------------: |:-----------------: |
 | ![lin-badge]      | ![win-badge]        | ![license-badge] |![release-badge] | ![download-badge]|
 
