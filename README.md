@@ -11,7 +11,7 @@ Qt工程持续集成系列之一 - 自动化编译 https://zhuanlan.zhihu.com/p/
 Qt工程持续集成系列之二 - 自动化发行 https://zhuanlan.zhihu.com/p/64154979
 
 ## status
-| [Linux][lin-link] | [Windows][win-link] |[License][license-link] | [Release][release-link]|[Download][download-link]|
+| [Linux/OSX][lin-link] | [Windows][win-link] |[License][license-link] | [Release][release-link]|[Download][download-link]|
 | :---------------: | :-----------------: | :-----------------:|:-----------------: |:-----------------: |
 | ![lin-badge]      | ![win-badge]        | ![license-badge] |![release-badge] | ![download-badge]|
 
