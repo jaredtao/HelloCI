@@ -6,24 +6,24 @@
 
 可以参考这个博客:
 
-[Qt工程持续集成系列之一 - 自动化编译](https://wentaojia2014.github.io/2019/04/30/Qt%E8%87%AA%E5%8A%A8%E5%8C%96%E7%BC%96%E8%AF%91/)
+[Qt工程持续集成系列之一 - 自动化编译](https://jaredtao.github.io/2019/04/30/Qt%E8%87%AA%E5%8A%A8%E5%8C%96%E7%BC%96%E8%AF%91/)
 
-[Qt工程持续集成系列之二 - 自动化发行](https://wentaojia2014.github.io/2019/04/30/Qt%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8F%91%E8%A1%8C/)
+[Qt工程持续集成系列之二 - 自动化发行](https://jaredtao.github.io/2019/04/30/Qt%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8F%91%E8%A1%8C/)
 
 ## status
 | [Ubuntu/MacOS][lin-link] | [Windows][win-link] |[License][license-link] | [Release][release-link]|[Download][download-link]|
 | :---------------: | :-----------------: | :-----------------:|:-----------------: |:-----------------: |
 | ![lin-badge]      | ![win-badge]        | ![license-badge] |![release-badge] | ![download-badge]|
 
-[lin-badge]: https://travis-ci.org/wentaojia2014/HelloCI.svg?branch=master "Travis build status"
-[lin-link]: https://travis-ci.org/wentaojia2014/HelloCI "Travis build status"
+[lin-badge]: https://travis-ci.org/jaredtao/HelloCI.svg?branch=master "Travis build status"
+[lin-link]: https://travis-ci.org/jaredtao/HelloCI "Travis build status"
 [win-badge]: https://ci.appveyor.com/api/projects/status/yykx4xufxtrax1hi?svg=true "AppVeyor build status"
 [win-link]: https://ci.appveyor.com/project/jiawentao/helloci "AppVeyor build status"
-[release-link]: https://github.com/wentaojia2014/HelloCI/releases "Release status"
-[release-badge]: https://img.shields.io/github/release/wentaojia2014/HelloCI.svg?style=flat-square" "Release status"
-[download-link]: https://github.com/wentaojia2014/HelloCI/releases/latest "Download status"
-[download-badge]: https://img.shields.io/github/downloads/wentaojia2014/HelloCI/total.svg?style=flat-square "Download status"
-[license-link]: https://github.com/wentaojia2014/HelloCI/blob/master/LICENSE "LICENSE"
+[release-link]: https://github.com/jaredtao/HelloCI/releases "Release status"
+[release-badge]: https://img.shields.io/github/release/jaredtao/HelloCI.svg?style=flat-square" "Release status"
+[download-link]: https://github.com/jaredtao/HelloCI/releases/latest "Download status"
+[download-badge]: https://img.shields.io/github/downloads/jaredtao/HelloCI/total.svg?style=flat-square "Download status"
+[license-link]: https://github.com/jaredtao/HelloCI/blob/master/LICENSE "LICENSE"
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg "MIT"
 
 ## Appveyor
