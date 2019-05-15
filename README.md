@@ -11,9 +11,9 @@
 [Qt工程持续集成系列之二 - 自动化发行](https://jaredtao.github.io/2019/04/30/Qt%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8F%91%E8%A1%8C/)
 
 ## status
-| [Ubuntu/MacOS][lin-link] | [Windows][win-link] |[License][license-link] | [Release][release-link]|[Download][download-link]| [Backers]| [Sponsors]|
-| :---------------: | :-----------------: | :-----------------:|:-----------------: |:-----------------: |:-----------------: |:-----------------: |
-| ![lin-badge]      | ![win-badge]        | ![license-badge] |![release-badge] | ![download-badge]|![backers]|![sponsors]|
+| [Ubuntu/MacOS][lin-link] | [Windows][win-link] |[License][license-link] | [Release][release-link]|[Download][download-link]|
+| :---------------: | :-----------------: | :-----------------:|:-----------------: |:-----------------: |
+| ![lin-badge]      | ![win-badge]        | ![license-badge] |![release-badge] | ![download-badge]|
 
 [lin-badge]: https://travis-ci.org/jaredtao/HelloCI.svg?branch=master "Travis build status"
 [lin-link]: https://travis-ci.org/jaredtao/HelloCI "Travis build status"
@@ -25,8 +25,9 @@
 [download-badge]: https://img.shields.io/github/downloads/jaredtao/HelloCI/total.svg?style=flat-square "Download status"
 [license-link]: https://github.com/jaredtao/HelloCI/blob/master/LICENSE "LICENSE"
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg "MIT"
-[backers]: https://github.com/jaredtao/HelloCI#backers
-[sponsors]: https://github.com/jaredtao/HelloCI#sponsors
+## support
+[![GitHub Issues](https://img.shields.io/badge/github-issues-red.svg?maxAge=60)](https://github.com/jaredtao/HelloCI/issues)
+[![GitHub Wiki](https://img.shields.io/badge/github-wiki-181717.svg?maxAge=60)](https://github.com/jaredtao/HelloCI/wiki)
 ## Appveyor
 Appveyor 支持 Qt5.9 至 5.12 包含vs2015/vs2017 x86/x64
 
