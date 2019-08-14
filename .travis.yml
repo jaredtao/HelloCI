@@ -47,7 +47,7 @@ matrix:
 group: deprecated-2019Q1
 
 # travis默认系统为ubuntu，并提供一些基础的命令。但是没有安装Qt，需要通过ubuntu源进行安装。
-# 关于ubuntu源 在这个网站上查看细节 https://launchpad.net/~beineri/+archive/ubuntu/
+# 关于ubuntu源 在这个网站上查看细节 https://launchpad.net/~beineri
 # 当然也可以通过qt安装包 +一些命令的方式来安装，这里以源的方式为主。
 #安装前的设置
 #添加qt5.12.1的源
