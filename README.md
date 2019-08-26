@@ -10,6 +10,12 @@
 
 [Qt工程持续集成系列之二 - 自动化发行](https://jaredtao.github.io/2019/04/30/Qt%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8F%91%E8%A1%8C/)
 
+如果图裂了,可到知乎专栏
+
+https://zhuanlan.zhihu.com/p/64154823
+
+https://zhuanlan.zhihu.com/p/64154979
+
 ## status
 | [Ubuntu/MacOS][lin-link] | [Windows][win-link] |[License][license-link] | [Release][release-link]|[Download][download-link]|
 | :---------------: | :-----------------: | :-----------------:|:-----------------: |:-----------------: |
