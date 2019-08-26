@@ -44,17 +44,30 @@ Appveyor 支持 Qt5.9 至 5.12 包含vs2015/vs2017 x86/x64
 ![](Appveyor.png)
 
 ## Travis
-Travis 使用 https://launchpad.net/~beineri 提供的源来安装Qt
+
+Travis 包括Ubuntu和MacOS两个系统
+
+Ubuntu使用 https://launchpad.net/~beineri 提供的源来安装Qt
 
 支持版本可参考下图:
 
 ![](ppa-binner.png)
 
-当前项目配置为最新的Ubuntu16.04(xenial) + Qt5.12.1
+目前配置中包括
 
-18.04(bionic)暂时没有找到可用的方法
+ubuntu 16.04 LTS(xenial)
 
+ubuntu 18.04 LTS(bionic)
 
+MacOS 使用brew安装Qt, Qt版本未作指定, 使用默认版本(brew没有直接的功能支持)。
+
+目前配置中包括：
+
+macOS 10.13 with xcode 9.4
+
+macOS 10.14 with xcode 10.3
+
+macOS 10.14 with xcode 11
 
 ## 开发环境
 
