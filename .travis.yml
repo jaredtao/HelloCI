@@ -45,6 +45,7 @@ matrix:
         bundler: true
         directories:
             - /usr/local/Cellar/qt/
+            - /usr/local/opt/qt/
 #macOS 10.14 with xcode 10.3
     - os: osx
       osx_image: xcode10.3
@@ -56,6 +57,7 @@ matrix:
         bundler: true
         directories:
             - /usr/local/Cellar/qt/
+            - /usr/local/opt/qt/
   #macOS 10.14 with xcode 11
     - os: osx
       osx_image: xcode11
@@ -67,8 +69,7 @@ matrix:
         bundler: true
         directories:
             - /usr/local/Cellar/qt/
-# 注意上面的缓存,指定qt安装路径，可以避免重复安装
-
+            - /usr/local/opt/qt/
 #组
 group: deprecated-2019Q1
 
