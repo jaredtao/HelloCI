@@ -4,6 +4,14 @@
 
 演示github中的Qt项目，使用CI持续集成(主要是Travis和Appveyor)
 
+***
+
+此项目已失去价值，github的actions更加强大，建议移步:
+
+https://github.com/jaredtao/HelloActions-Qt
+
+## 原理
+
 可以参考这个博客:
 
 [Qt工程持续集成系列之一 - 自动化编译](https://jaredtao.github.io/2019/04/30/Qt%E8%87%AA%E5%8A%A8%E5%8C%96%E7%BC%96%E8%AF%91/)
